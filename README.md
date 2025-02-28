@@ -1,10 +1,10 @@
 [![](./public/catalyst-doc-header.png)](https://github.com/rulyardiansyah/catalyst-doc)
 
-Dokumentasi Catalyst ini menggunakan template [Starlight](https://starlight.astro.build) dari [Astro](https://astro.build/). Untuk menjalankan dokumentasi ini di lokal, clone terlebih dahulu repository ini.
-
 --
 
-## 📒 Ringkasan
+## 🛠 Setup
+
+Dokumentasi Catalyst ini menggunakan template [Starlight](https://starlight.astro.build) dari [Astro](https://astro.build/). Untuk menjalankan dokumentasi ini di lokal, clone terlebih dahulu repository ini.
 
 1. Di dalam direktori hasil clone tersebut, ketikan command `npm i` atau `npm install` untuk meng-install semua dependencies yang dibutuhkan.
 2. Ketikkan command `npm run dev` untuk menjalankan repo ini di server lokal.
@@ -36,7 +36,7 @@ Gambar dapat ditambahkan di `src/assets/` dan di-embed dalam Markdown dengan lin
 
 --
 
-## 🧞 Daftar Command
+## 📋 Daftar Command
 
 Semua command di bawah ini dijalankan root direktori `./catalyst-doc`.
 

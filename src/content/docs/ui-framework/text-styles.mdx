@@ -1,0 +1,281 @@
+---
+title: Text Styles
+---
+
+import { Badge, Tabs, TabItem } from '@astrojs/starlight/components';
+
+Setiap elemen visual teks yang termuat di dalam seluruh komponen yang ada dalam Catalyst ini **pasti** menggunakan text styles yang telah didefinisikan di sini. Sehingga, penting untuk mendefinisikan text styles di sini secara global, sehingga dapat dipanggil dari mana saja.
+
+## Headers
+
+<br />
+
+<Badge variant='note' text='Preview' />
+
+<h1 class="headers-display large preview-mode">Header Display</h1>
+<h1 class="headers-display small preview-mode">Header Display</h1>
+
+<br />
+
+<Badge variant='note' text='Properties' />
+
+| Property    | Value                             | Referensi                                    |
+| ----------- | --------------------------------- | -------------------------------------------- |
+| Font Family | `alias.text-group.header-display` | [Semantic Typography](./semantic-typography) |
+| Font Size   | `type-scale.large.xxxl`           | [Font Size](./font-size)                     |
+| Font Weight | `font-weight.regular`             | [Font Weight](./misc#font-weight)            |
+| Line Height | `line-height.tight`               | [Line Height](./misc#line-height)            |
+
+<br />
+
+<Badge variant='note' text='Sample Code' />
+
+Contoh implementasi dari text styles ini:
+
+<Tabs>
+  <TabItem label="CSS">
+    ```css
+    // styles/text-styles.css
+    @import 'catalyst/css/text-style.css';
+
+    .headers-display-large {
+      font-family: var(--text-styles-large-headers-display-font-family);
+      font-weight: var(--text-styles-large-headers-display-font-weight);
+      font-size: var(--text-styles-large-headers-display-font-size);
+      line-height: var(--text-styles-large-headers-display-line-height);
+    }
+
+    .headers-display-small {
+      font-family: var(--text-styles-small-headers-display-font-family);
+      font-weight: var(--text-styles-small-headers-display-font-weight);
+      font-size: var(--text-styles-small-headers-display-font-size);
+      line-height: var(--text-styles-small-headers-display-line-height);
+    }
+    ```
+    ```html
+    // index.html
+    <link rel="stylesheet" href="catalyst/css/text-style.css" />
+    
+    <h1 class="headers-display-large">Header Display</h1>
+    <h1 class="headers-display-small">Header Display</h1>
+    ```
+  </TabItem>
+  <TabItem label="SCSS">
+    ```scss
+    // styles/text-styles.scss
+    @use 'catalyst/scss/text-style' as catalyst;
+
+    @mixin headers-display-large {
+      font-family: catalyst.$text-styles-large-headers-display-font-family;
+      font-weight: catalyst.$text-styles-large-headers-display-font-weight;
+      font-size: catalyst.$text-styles-large-headers-display-font-size;
+      line-height: catalyst.$text-styles-large-headers-display-line-height;
+    }
+
+    @mixin headers-display-small {
+      font-family: catalyst.$text-styles-small-headers-display-font-family;
+      font-weight: catalyst.$text-styles-small-headers-display-font-weight;
+      font-size: catalyst.$text-styles-small-headers-display-font-size;
+      line-height: catalyst.$text-styles-small-headers-display-line-height;
+    }
+
+    .headers-display-large {
+      @include headers-display-large();
+    }
+
+    .headers-display-small {
+      @include headers-display-small();
+    }
+    ```
+    ```html
+    // index.html
+    <link rel="stylesheet" href="catalyst/css/text-style.css" />
+
+    <h1 class="headers-display-large">Header Display</h1>
+    <h1 class="headers-display-small">Header Display</h1>
+    ```
+  </TabItem>
+  <TabItem label="Flutter">
+    ```dart
+    // lib/theme/text_styles.dart
+    import 'package:flutter/material.dart';
+    import 'package:catalyst/flutter/text_style.dart';
+
+    class AppTextStyles {
+      AppTextStyles._();
+
+      static const TextStyle headerDisplayLarge = TextStyle(
+        fontFamily: StyleDictionary.textStylesLargeHeadersDisplayFontFamily,
+        fontSize: StyleDictionary.textStylesLargeHeadersDisplayFontSize,
+        fontWeight: StyleDictionary.textStylesLargeHeadersDisplayFontWeight,
+        height: StyleDictionary.textStylesLargeHeadersDisplayLineHeight,
+      );
+
+      static const TextStyle headerDisplaySmall = TextStyle(
+        fontFamily: StyleDictionary.textStylesSmallHeadersDisplayFontFamily,
+        fontSize: StyleDictionary.textStylesSmallHeadersDisplayFontSize,
+        fontWeight: StyleDictionary.textStylesSmallHeadersDisplayFontWeight,
+        height: StyleDictionary.textStylesSmallHeadersDisplayLineHeight,
+      );
+    }
+    ```
+    ```dart
+    // lib/main.dart
+    import 'package:flutter/material.dart';
+    import 'lib/theme/text_styles.dart';
+
+    Text(
+      'Header Display',
+      style: AppTextStyles.headerDisplayLarge,
+    );
+
+    Text(
+      'Header Display',
+      style: AppTextStyles.headerDisplaySmall,
+    );
+    ```
+  </TabItem>
+</Tabs>
+
+<br />
+<br />
+
+<Badge variant='note' text='Preview' />
+
+<h1 class="headers-hero large preview-mode">Header Hero</h1>
+<h1 class="headers-hero small preview-mode">Header Hero</h1>
+
+<Tabs>
+  <TabItem label="CSS">
+    ```css
+    // styles/text-styles.css
+    @import 'catalyst/css/text-style.css';
+
+    .headers-hero-large {
+      font-family: var(--text-styles-large-headers-hero-font-family);
+      font-weight: var(--text-styles-large-headers-hero-font-weight);
+      font-size: var(--text-styles-large-headers-hero-font-size);
+      line-height: var(--text-styles-large-headers-hero-line-height);
+    }
+
+    .headers-hero-small {
+      font-family: var(--text-styles-small-headers-hero-font-family);
+      font-weight: var(--text-styles-small-headers-hero-font-weight);
+      font-size: var(--text-styles-small-headers-hero-font-size);
+      line-height: var(--text-styles-small-headers-hero-line-height);
+    }
+    ```
+    ```html
+    // index.html
+    <link rel="stylesheet" href="catalyst/css/text-style.css" />
+    
+    <h1 class="headers-hero-large">Header Hero</h1>
+    <h1 class="headers-hero-small">Header Hero</h1>
+    ```
+  </TabItem>
+  <TabItem label="SCSS">
+    ```scss
+    // styles/text-styles.scss
+    @use 'catalyst/scss/text-style' as catalyst;
+
+    @mixin headers-hero-large {
+      font-family: catalyst.$text-styles-large-headers-hero-font-family;
+      font-weight: catalyst.$text-styles-large-headers-hero-font-weight;
+      font-size: catalyst.$text-styles-large-headers-hero-font-size;
+      line-height: catalyst.$text-styles-large-headers-hero-line-height;
+    }
+
+    @mixin headers-hero-small {
+      font-family: catalyst.$text-styles-small-headers-hero-font-family;
+      font-weight: catalyst.$text-styles-small-headers-hero-font-weight;
+      font-size: catalyst.$text-styles-small-headers-hero-font-size;
+      line-height: catalyst.$text-styles-small-headers-hero-line-height;
+    }
+
+    .headers-hero-large {
+      @include headers-hero-large();
+    }
+
+    .headers-hero-small {
+      @include headers-hero-small();
+    }
+    ```
+    ```html
+    // index.html
+    <link rel="stylesheet" href="catalyst/css/text-style.css" />
+
+    <h1 class="headers-hero-large">Header Hero</h1>
+    <h1 class="headers-hero-small">Header Hero</h1>
+    ```
+  </TabItem>
+  <TabItem label="Flutter">
+    ```dart
+    // lib/theme/text_styles.dart
+    import 'package:flutter/material.dart';
+    import 'package:catalyst/flutter/text_style.dart';
+
+    class AppTextStyles {
+      AppTextStyles._();
+
+      static const TextStyle headerHeroLarge = TextStyle(
+        fontFamily: StyleDictionary.textStylesLargeHeadersHeroFontFamily,
+        fontSize: StyleDictionary.textStylesLargeHeadersHeroFontSize,
+        fontWeight: StyleDictionary.textStylesLargeHeadersHeroFontWeight,
+        height: StyleDictionary.textStylesLargeHeadersHeroLineHeight,
+      );
+
+      static const TextStyle headerHeroSmall = TextStyle(
+        fontFamily: StyleDictionary.textStylesSmallHeadersHeroFontFamily,
+        fontSize: StyleDictionary.textStylesSmallHeadersHeroFontSize,
+        fontWeight: StyleDictionary.textStylesSmallHeadersHeroFontWeight,
+        height: StyleDictionary.textStylesSmallHeadersHeroLineHeight,
+      );
+    }
+    ```
+    ```dart
+    // lib/main.dart
+    import 'package:flutter/material.dart';
+    import 'lib/theme/text_styles.dart';
+
+    Text(
+      'Header Hero',
+      style: AppTextStyles.headerHeroLarge,
+    );
+
+    Text(
+      'Header Hero',
+      style: AppTextStyles.headerHeroSmall,
+    );
+    ```
+  </TabItem>
+</Tabs>
+
+<br />
+
+<hr />
+
+<br />
+
+## Body
+
+<br />
+
+<hr />
+
+<br />
+
+## Form & UI
+
+<br />
+
+<hr />
+
+<br />
+
+## Numeric
+
+<br />
+
+<hr />
+
+<br />

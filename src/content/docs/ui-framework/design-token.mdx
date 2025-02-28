@@ -1,0 +1,121 @@
+---
+title: Design Token
+---
+
+import { Aside, Tabs, TabItem } from '@astrojs/starlight/components';
+
+Sebelum masuk lebih dalam, perlu kita pahami terlebih dahulu apa itu Design Token.
+
+## Design Token?
+
+Design Token adalah wadah untuk menyimpan value yang digunakan pada implementasi UI. Value dari token ini pada dasarnya dapat berupa apapun, namun praktisnya berisi size, color, font family, spacing, dan sebagainya.
+
+Token ini disimpan dalam satu atau lebih file JSON. Dari file JSON ini, dengan bantuan [Style Dictionary](https://amzn.github.io/style-dictionary), kita bisa men-generate output style variables untuk berbagai macam format dan platform, seperti CSS/SCSS/Less/Stylus, JS/TS, Flutter, Android XML, Android Kotlin, iOS Obj-C, iOS Swift, Sketch, dan format lainnya.
+
+![Generating Design Token into Multiple Platforms](./src/assets/doc-framework-design-token-generating-into-multiple-platforms.png)
+
+Sebagai contoh, di bawah ini adalah token sederhana yang memuat informasi warna.
+
+```json
+// tokens/tokens.json
+{
+  "palette": {
+    "light": {
+      "grey": { "$value": "#333333", "$type": "color" },
+      "blue": { "$value": "#158EDF", "$type": "color" }
+    },
+    "dark": {
+      "grey": { "$value": "#CCCCCC", "$type": "color" },
+      "blue": { "$value": "#2A8AC6", "$type": "color" }
+    }
+  }
+}
+```
+
+Ketika di-transform menggunakan Style Dictionary, maka akan kita dapatkan output seperti berikut.
+
+<Tabs>
+  <TabItem label="SCSS">
+    ```scss
+    // Digenerate sebagai SCSS variables
+    // build/scss/_tokens.scss
+    $palette-light-grey: #333333;
+    $palette-light-blue: #158EDF;
+    
+    $palette-dark-grey: #CCCCCC;
+    $palette-dark-blue: #2A8AC6;
+    ```
+  </TabItem>
+  <TabItem label="JS/TS">
+    ```js
+    // Digenerate sebagai JavaScript/TypeScript variables
+    // build/js/_tokens.js
+    const paletteLightGrey = '#333333';
+    const paletteLightBlue = '#158EDF';
+    
+    const paletteDarkGrey = '#CCCCCC';
+    const paletteDarkBlue = '#2A8AC6';
+    ```
+  </TabItem>
+  <TabItem label="Flutter">
+    ```dart
+    // Digenerate sebagai Flutter variables
+    // lib/src/design_token.dart
+    const paletteLightGrey = '#333333';
+    const paletteLightBlue = '#158EDF';
+    
+    const paletteDarkGrey = '#CCCCCC';
+    const paletteDarkBlue = '#2A8AC6';
+    ```
+  </TabItem>
+  <TabItem label="Android XML">
+    ```xml
+    <!-- Digenerate sebagai Android XML variables -->
+    <!-- res/values/colors.xml -->
+    <resources>
+      <color name="palette_light_grey">#333333</color>
+      <color name="palette_light_blue">#158EDF</color>
+      
+      <color name="palette_dark_grey">#CCCCCC</color>
+      <color name="palette_dark_blue">#2A8AC6</color>
+    </resources>
+    ```
+  </TabItem>
+  <TabItem label="iOS Obj-C">
+    ```objective-c
+    // Digenerate sebagai iOS Objective-C variables
+    // build/ios/_tokens.h
+    NSString *paletteLightGrey = @"#333333";
+    NSString *paletteLightBlue = @"#158EDF";
+    
+    NSString *paletteDarkGrey = @"#CCCCCC";
+    NSString *paletteDarkBlue = @"#2A8AC6";
+    ```
+  </TabItem>
+</Tabs>
+
+Sederhana dan singkatnya, fungsi token dalam Catalyst adalah seperti itu.
+
+<br />
+
+<hr />
+
+<br />
+
+## Karakteristik Token.
+
+Token ini memiliki beberapa karakteristik, di antaranya:
+
+| Karakteristik                    | Penjelasan                                                                                                                                                                                                 |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Centralized                      | Token disimpan dalam satu repositori terpusat untuk memastikan pembaruan konsisten di semua produk atau project. Mengubah nilai token secara otomatis akan memperbarui semua instance yang menggunakannya. |
+| Platform-agnostic                | Token bersifat independen dari platform, sehingga dapat diubah ke format yang dibutuhkan, seperti variable CSS, const Swift, dll..                                                                         |
+| Atomic and reusable              | Design token bersifat atomic sehingga dapat digabungkan atau digunakan kembali dalam berbagai konteks.                                                                                                     |
+| Maintainable and themeable       | Dengan perencanaan token yang tepat, maka pengelolaan dan theme customization dapat dilakukan dengan mudah.                                                                                                |
+| Design 🫱🏻‍🫲🏼 Development | Token memastikan desain dan implementasinya berjalan selaras. Apa yang terlihat di dalam design tool, itulah yang akan tercermin dalam kode.                                                               |
+
+<br />
+
+<br />
+
+Apabila penjelasan di atas masih dirasa abstrak, di halaman selanjutnya akan diberikan gambaran lebih detail dan contoh agar didapatkan pemahaman yang lebih komprehensif terkait design token dan implementasinya dalam Catalyst.

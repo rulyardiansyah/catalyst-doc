@@ -1,0 +1,89 @@
+---
+title: Font Size
+---
+
+## Type Scale
+
+Nilai skala tipografi yang dituliskan sebagai `type-scale` adalah skala tipografi yang digunakan untuk mengatur ukuran teks elemen visual non-komponen, seperti Heading 1, paragraf, blockquote, dsb..
+
+### Large
+
+Secara default, `type-scale.large` digunakan untuk implementasi desain web, desktop, atau tablet dengan ukuran viewport yang relatif besar (di atas 768px).
+
+**Prefix**: `type-scale.large.`
+
+| Nama Token | Value   | Deskripsi                                                      |
+| ---------- | ------- | -------------------------------------------------------------- |
+| `xxs`      | `0.562` |                                                                |
+| `xs`       | `0.707` |                                                                |
+| `s`        | `0.875` |                                                                |
+| `m`        | `1.000` | Base size: Ukuran yang dijadikan patokan bagi skala yang lain. |
+| `xm`       | `1.125` |                                                                |
+| `xxm`      | `1.250` |                                                                |
+| `l`        | `1.414` |                                                                |
+| `ll`       | `1.999` |                                                                |
+| `xl`       | `2.827` |                                                                |
+| `xxl`      | `5.653` |                                                                |
+| `xxxl`     | `7.993` |                                                                |
+
+<br />
+
+### Small
+
+Untuk `type-scale.small` secara default digunakan untuk implementasi desain pada mobile (di bawah 768 px).
+
+**Prefix**: `type-scale.small.`
+
+| Nama Token | Value   | Deskripsi                                                      |
+| ---------- | ------- | -------------------------------------------------------------- |
+| `xxs`      | `0.512` |                                                                |
+| `xs`       | `0.640` |                                                                |
+| `s`        | `0.800` |                                                                |
+| `m`        | `1.000` | Base size: Ukuran yang dijadikan patokan bagi skala yang lain. |
+| `xm`       | `1.143` |                                                                |
+| `xxm`      | `1.196` |                                                                |
+| `l`        | `1.250` |                                                                |
+| `ll`       | `1.563` |                                                                |
+| `xl`       | `1.953` |                                                                |
+| `xxl`      | `3.052` |                                                                |
+| `xxxl`     | `3.815` |                                                                |
+
+Aturan yang menyebutkan penggunaan `type-scale.large` untuk implementasi desain desktop/tablet dan `type-scale.small` untuk mobile, tidak bersifat mutlak. Pada akhirnya, semua bergantung dari kebutuhan desain produk atau projek itu sendiri.
+
+<br />
+
+<br />
+
+<br />
+
+## Form & UI
+
+### Large
+
+Nilai skala tipografi yang dituliskan sebagai `form-ui` adalah skala tipografi yang digunakan untuk mengatur ukuran teks dalam suatu komponen, seperti label dalam Button, teks dalam Text Input, teks dalam Table, dsb..
+
+Nilai yang dibungkus dalam kurung kurawal `{ }` merupakan bentuk referensi. Sebagai contoh, `form-ui.large.xs` mengambil nilai dari `type-scale.large.xxs` yang ada di [Type Scale · Large](#large).
+
+| Nama Token          | Value                    |
+| ------------------- | ------------------------ |
+| `form-ui.large.xs`  | `{type-scale.large.xxs}` |
+| `form-ui.large.s`   | `{type-scale.large.xs}`  |
+| `form-ui.large.m`   | `{type-scale.large.s}`   |
+| `form-ui.large.l`   | `{type-scale.large.m}`   |
+| `form-ui.large.ll`  | `{type-scale.large.xxm}` |
+| `form-ui.large.xl`  | `{type-scale.large.l}`   |
+| `form-ui.large.xxl` | `{type-scale.large.xl}`  |
+
+<br />
+
+### Small
+
+| Nama Token          | Value                    |
+| ------------------- | ------------------------ |
+| `form-ui.small.xs`  | `{type-scale.small.xs}`  |
+| `form-ui.small.s`   | `{type-scale.small.s}`   |
+| `form-ui.small.m`   | `{type-scale.small.m}`   |
+| `form-ui.small.l`   | `{type-scale.small.xm}`  |
+| `form-ui.small.ll`  | `{type-scale.small.xxm}` |
+| `form-ui.small.xl`  | `{type-scale.small.l}`   |
+| `form-ui.small.xxl` | `{type-scale.small.xxl}` |

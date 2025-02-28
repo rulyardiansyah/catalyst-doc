@@ -1,0 +1,20 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --comp-container-panel-padding-hor-s: 24;
+  --comp-container-panel-padding-ver-top-s: 24;
+  --comp-container-panel-padding-ver-bottom-s: 32;
+  --comp-container-panel-gap-s: 20;
+  --comp-container-panel-padding-hor-m: 32;
+  --comp-container-panel-padding-ver-top-m: 24;
+  --comp-container-panel-padding-ver-bottom-m: 32;
+  --comp-container-panel-gap-m: 24;
+  --comp-container-panel-border-radius: 8;
+  --comp-container-panel-light-fill-bg: rgba(255, 255, 255, 0.8);
+  --comp-container-panel-light-title: #394156;
+  --comp-container-panel-dark-fill-bg: rgba(31, 35, 43, 0.8);
+  --comp-container-panel-dark-title: #f5f9ff;
+  --comp-container-panel-title-gap: 12;
+}

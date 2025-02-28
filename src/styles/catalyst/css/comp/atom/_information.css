@@ -1,0 +1,48 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --comp-information-badge-dot-size: 8;
+  --comp-information-badge-light-fill-bg-warning: #fcae40;
+  --comp-information-badge-light-fill-bg-important: #e53866;
+  --comp-information-badge-light-fill-bg-success: #94ca7d;
+  --comp-information-badge-light-label: #f5f9ff;
+  --comp-information-badge-dark-fill-bg-warning: #d3a35f;
+  --comp-information-badge-dark-fill-bg-important: #c6537d;
+  --comp-information-badge-dark-fill-bg-success: #88b285;
+  --comp-information-badge-dark-label: #f5f9ff;
+  --comp-information-badge-padding-hor: 4;
+  --comp-information-badge-border-radius: 4;
+  --comp-information-tag-light-fill-bg: #d2f3f4;
+  --comp-information-tag-light-label: #1fc4c7;
+  --comp-information-tag-dark-fill-bg: #1e4b50;
+  --comp-information-tag-dark-label: #4cbbc8;
+  --comp-information-tag-padding-hor-xs: 4;
+  --comp-information-tag-padding-ver-xs: 2;
+  --comp-information-tag-border-radius-xs: 2;
+  --comp-information-tag-padding-hor-s: 8;
+  --comp-information-tag-padding-ver-s: 4;
+  --comp-information-tag-border-radius-s: 4;
+  --comp-information-tag-padding-hor-m: 12;
+  --comp-information-tag-padding-ver-m: 8;
+  --comp-information-tag-border-radius-m: 4;
+  --comp-information-indicator-progress-bar-bar-height-s: 4;
+  --comp-information-indicator-progress-bar-bar-height-m: 8;
+  --comp-information-indicator-progress-bar-border-radius: 48;
+  --comp-information-indicator-progress-bar-light-track-fill-bg: #ffffff;
+  --comp-information-indicator-progress-bar-light-track-border-color: #eef3ff;
+  --comp-information-indicator-progress-bar-light-progress-fill-bg: #94ca7d;
+  --comp-information-indicator-progress-bar-dark-track-fill-bg: #1f232b;
+  --comp-information-indicator-progress-bar-dark-track-border-color: #2d3443;
+  --comp-information-indicator-progress-bar-dark-progress-fill-bg: #88b285;
+  --comp-information-indicator-circular-size-s: 12;
+  --comp-information-indicator-circular-size-m: 20;
+  --comp-information-indicator-circular-size-l: 32;
+  --comp-information-indicator-circular-light-track-fill-bg: #ffffff;
+  --comp-information-indicator-circular-light-track-border-color: #eef3ff;
+  --comp-information-indicator-circular-light-progress-fill-bg: #94ca7d;
+  --comp-information-indicator-circular-dark-track-fill-bg: #1f232b;
+  --comp-information-indicator-circular-dark-track-border-color: #2d3443;
+  --comp-information-indicator-circular-dark-progress-fill-bg: #88b285;
+}

@@ -1,0 +1,44 @@
+@use 'catalyst/scss/text-style' as catalyst;
+
+// Deklarasi Mixins
+@mixin headers-display-large {
+  font-family: catalyst.$text-styles-large-headers-display-font-family;
+  font-size: catalyst.$text-styles-large-headers-display-font-size + rem;
+  font-weight: catalyst.$text-styles-large-headers-display-font-weight;
+  line-height: catalyst.$text-styles-large-headers-display-line-height;
+}
+@mixin headers-display-small {
+  font-family: catalyst.$text-styles-small-headers-display-font-family;
+  font-size: catalyst.$text-styles-small-headers-display-font-size + rem;
+  font-weight: catalyst.$text-styles-small-headers-display-font-weight;
+  line-height: catalyst.$text-styles-small-headers-display-line-height;
+}
+
+@mixin headers-hero-large {
+  font-family: catalyst.$text-styles-large-headers-hero-font-family;
+  font-size: catalyst.$text-styles-large-headers-hero-font-size + rem;
+  font-weight: catalyst.$text-styles-large-headers-hero-font-weight;
+  line-height: catalyst.$text-styles-large-headers-hero-line-height;
+}
+
+@mixin headers-hero-small {
+  font-family: catalyst.$text-styles-small-headers-hero-font-family;
+  font-size: catalyst.$text-styles-small-headers-hero-font-size + rem;
+  font-weight: catalyst.$text-styles-small-headers-hero-font-weight;
+  line-height: catalyst.$text-styles-small-headers-hero-line-height;
+}
+
+body { font-family: 'Maven Pro', sans-serif; }
+// code, pre { font-family: 'Ubuntu Mono', monospace !important; }
+
+.preview-mode { margin: 1rem 0 !important; } // Hanya untuk kebutuhan preview di dalam dokumentasi Catalyst
+
+.headers-display {
+  &.large { @include headers-display-large; }
+  &.small { @include headers-display-small; }
+}
+
+.headers-hero {
+  &.large { @include headers-hero-large; }
+  &.small { @include headers-hero-small; }
+}

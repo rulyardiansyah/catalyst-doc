@@ -1,0 +1,46 @@
+---
+title: Struktur File
+---
+
+import { Badge, FileTree } from '@astrojs/starlight/components';
+
+Struktur File
+
+<FileTree>
+- tokens
+  - atom
+    - action.json
+    - container.json
+    - helper.json
+    - icon.json
+    - information.json
+    - input.json
+    - media.json
+    - presentation.json
+    - selection.json
+  - core
+    - client-xxx.json
+    - daksa.json
+  - molecule
+    - communication.json
+    - containment.json
+    - navigation.json
+  - organism
+    - bar.json
+  - theme
+    - client-xxx.json
+    - daksa.json
+  - misc.json
+  - **semantic.json**
+  - size.json
+  - $metadata.json
+  - $themes.json
+- **config.json**
+- README.md
+</FileTree>
+
+<br />
+
+<Badge variant='caution' text='Keterangan:' />
+- `config.json` adalah file konfigurasi bagi **Style Dictionary** untuk menerjemahkan token ke dalam format yang diinginkan.
+- `semantic.json` adalah file yang memuat semua token semantik.

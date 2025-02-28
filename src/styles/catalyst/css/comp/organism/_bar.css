@@ -1,0 +1,14 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --comp-bar-navs-logo-size: 48;
+  --comp-bar-navs-padding-hor: 12;
+  --comp-bar-navs-padding-ver-top: 12;
+  --comp-bar-navs-padding-ver-bottom: 24;
+  --comp-bar-navs-gap: 24;
+  --comp-bar-navs-light-fill-bg: rgba(255, 255, 255, 0.8);
+  --comp-bar-navs-dark-fill-bg: rgba(31, 35, 43, 0.8);
+  --comp-bar-navs-border-radius: 8;
+}
